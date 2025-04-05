@@ -5,19 +5,17 @@
 }
 
 :root {
-    --cor-primaria: #FFFFFF;
-    --cor-secundaria: #F5501B;
+    --cor-fonte: #FFFFFF;
+    --cor-fundo: #00551e;
+    --cor-fundo-section: #205527;
+    --cor-botoes: #198754;
+    --cor-hover: #20c997;
     --fonte-principal: sans-serif;
 
 }
 
 body {
-    background: linear-gradient(
-        90deg,
-        rgba(1, 78, 15, 1) 0%,
-        rgba(78, 241, 127, 1) 35%,
-        rgba(46, 201, 18, 1) 100%
-      );
+    background: var(--cor-fundo);
       font-family: var(--fonte-principal);
 }
 
@@ -33,19 +31,7 @@ main {
     border-radius: 20px;
     overflow: hidden;
     z-index: 1;
-}
-
-.container:before {
-    content: "";
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-    filter: blur(10px);
+    background-color: var(--cor-fundo-section);
 }
 
 .container__cabecalho {
@@ -57,7 +43,7 @@ main {
 }
 
 .cabecalho__content {
-    color: var(--cor-primaria);
+    color: var(--cor-fonte);
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
@@ -68,14 +54,14 @@ main {
 }
 
 .cabecalho__content__home {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-botoes);
     padding: 0.5rem;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 .cabecalho__content__home:hover {
-    box-shadow: 0 0 1rem 0;
-    background-color: #f68a2d;
+    box-shadow: 0 0 1rem 0 #7f7f7f;
+    background-color: var(--cor-hover);
 }
 
 .content {
@@ -89,13 +75,13 @@ main {
     margin-left: 2rem;
     justify-content: center;
     gap: 2rem;
-    color: var(--cor-primaria);
+    color: var(--cor-fonte);
 
 }
 
 a {
     text-decoration: none;
-    color: var(--cor-primaria);
+    color: var(--cor-fonte);
 }
 
 img {
@@ -106,7 +92,7 @@ img {
 
 .content__texto {
     font-family: var(--fonte-principal);
-    color: var(--cor-primaria);
+    color: var(--cor-fonte);
 }
 
 .left {
@@ -137,15 +123,15 @@ h3 {
     gap: 1.5rem;
 
     font-weight: bold;
-    color: var(--cor-primaria);
-    background-color: var(--cor-secundaria);
+    color: var(--cor-fonte);
+    background-color: var(--cor-botoes);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .content__pre-order:hover {
-    box-shadow: 0 0 1rem 0;
-    background-color: #f68a2d;
+    box-shadow: 0 0 1rem 0 #7f7f7f;
+    background-color: var(--cor-hover);
 }
 
 .content__text__pre-order {
